@@ -1,4 +1,4 @@
-# Lumina Photography Portfolio
+# Lumina 
 
 A professional, responsive photography portfolio website built with modern web technologies. Lumina showcases stunning photography work with smooth animations, dynamic galleries, and an elegant dark theme design.
 
