@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Lumina Photography for inquiries, bookings, or collaborations. I'd love to hear from you!">
+    <title>Contact | Lumina Photography</title>
+    
+    <link rel="icon" href="../assets/img/logo/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="loading">
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo" data-aos="fade-down" data-aos-delay="300">
+                    <a href="../index.html">
+                        <span class="logo-text">LUMINA</span>
+                    </a>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                            <a href="portfolio.html" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="700">
+                            <a href="contact.html" class="nav-link active">Contact</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="800">
+                            <a href="blog.html" class="nav-link">Journal</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-toggle" data-aos="fade-down" data-aos-delay="900">
+                    <span class="nav-toggle-icon"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Get In Touch</h1>
+                <p class="page-description" data-aos="fade-up" data-aos-delay="200">
+                    Let's discuss your project and create something beautiful together
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-grid section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="contact-form-wrapper">
+                            <div class="section-header">
+                                <span class="section-subtitle">Reach Out</span>
+                                <h2 class="section-title">Send Me a Message</h2>
+                                <p class="section-description">Have a question or want to work together? I'd love to hear from you!</p>
+                            </div>
+                            
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                                    <span class="form-error" id="name-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                                    <span class="form-error" id="email-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+                                    <span class="form-error" id="subject-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                                    <span class="form-error" id="message-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <label for="privacy" class="checkbox-label">I agree to the privacy policy</label>
+                                    </div>
+                                    <span class="form-error" id="privacy-error"></span>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary submit-btn">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                                
+                                <div class="form-status">
+                                    <div class="success-message">
+                                        <i class="fas fa-check-circle"></i>
+                                        <p>Your message has been sent successfully. I'll get back to you soon!</p>
+                                    </div>
+                                    <div class="error-message">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <p>There was a problem sending your message. Please try again.</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="contact-info-wrapper">
+                            <div class="contact-info">
+                                <div class="section-header">
+                                    <span class="section-subtitle">Contact Details</span>
+                                    <h2 class="section-title">How to Find Me</h2>
+                                    <p class="section-description">Feel free to reach out through any of these channels</p>
+                                </div>
+                                
+                                <div class="info-list">
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3>Email</h3>
+                                            <p><a href="mailto:hello@luminaphotography.com">hello@luminaphotography.com</a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3>Phone</h3>
+                                            <p><a href="tel:+14155552671">+1 (415) 555-2671</a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3>Studio Location</h3>
+                                            <p>127 Union Square, San Francisco, CA 94108</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3>Working Hours</h3>
+                                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                            <p>Weekends: By appointment only</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="social-links">
+                                    <h3>Connect With Me</h3>
+                                    <div class="social-icons">
+                                        <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="https://pinterest.com" target="_blank" class="social-icon" aria-label="Pinterest">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                        <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="map-section">
+            <div class="map-wrapper" data-aos="fade-up">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.966355662506!2d-122.40935368468864!3d37.78815087975653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808ed1833b65%3A0x967bb6886f3bee!2sUnion%20Square%2C%20San%20Francisco%2C%20CA%2094108!5e0!3m2!1sen!2sus!4v1633046274367!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Studio Location Map">
+                    </iframe>
+                </div>
+                
+                <div class="map-info">
+                    <div class="map-card">
+                        <h3><i class="fas fa-map-marked-alt"></i> Visit My Studio</h3>
+                        <p>Come by my studio located in downtown San Francisco near Union Square. I'm available for in-person consultations by appointment.</p>
+                        <a href="https://goo.gl/maps/SZ9MFLWDg4vQA5U26" target="_blank" class="btn btn-outline btn-sm">
+                            <span>Get Directions</span>
+                            <i class="fas fa-directions"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section section-padding bg-lighter">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-aos="fade-up">Questions</span>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Frequently Asked</h2>
+                    <p class="section-description" data-aos="fade-up" data-aos-delay="200">
+                        Find answers to common questions about my photography services
+                    </p>
+                </div>
+                
+                <div class="faq-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>How far in advance should I book your services?</h3>
+                                <span class="accordion-icon"></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>For wedding photography, I recommend booking 6-12 months in advance to ensure availability. For portrait sessions and smaller events, 2-4 weeks notice is usually sufficient, but more time is always better, especially during peak seasons.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>What is your payment process?</h3>
+                                <span class="accordion-icon"></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>A non-refundable retainer of 30% is required to secure your date, with the remaining balance due one week before the scheduled session. I accept credit cards, bank transfers, and PayPal payments.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>How long does it take to receive the final images?</h3>
+                                <span class="accordion-icon"></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>You'll receive a few preview images within 3-5 days after your session. For portrait sessions, the full gallery is typically delivered within 2 weeks. For weddings and large events, delivery time is 4-6 weeks.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>Do you travel for photography sessions?</h3>
+                                <span class="accordion-icon"></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Yes! I love to travel for photography. Local travel within 30 miles of San Francisco is included in the standard packages. For destinations beyond that, additional travel fees apply which will be outlined in your custom quote.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>What should I wear for my photo session?</h3>
+                                <span class="accordion-icon"></span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>I provide a detailed preparation guide after booking, but generally I recommend wearing solid colors, avoiding busy patterns, and coordinating within your group without matching exactly. Most importantly, wear something that makes you feel confident and comfortable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section section-padding">
+            <div class="container text-center">
+                <h2 class="section-title" data-aos="fade-up">Ready to Capture Your Moments?</h2>
+                <p class="section-description" data-aos="fade-up" data-aos-delay="200">
+                    Book your session today and let's create something beautiful together.
+                </p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#contact-form" class="btn btn-primary smooth-scroll">
+                        <span>Contact Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="portfolio.html" class="btn btn-outline">
+                        <span>View Portfolio</span>
+                        <i class="fas fa-images"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-brand">
+                            <a href="../index.html" class="footer-logo">LUMINA</a>
+                            <p>Capturing moments that last forever through the art of photography.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="blog.html">Journal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="footer-newsletter">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to receive updates and special offers</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Lumina Photography. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>

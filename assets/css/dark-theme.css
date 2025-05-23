@@ -1,0 +1,189 @@
+:root {
+    --color-bg-primary: #0a0a0a;
+    --color-bg-secondary: #121212;
+    --color-bg-darker: #080808;
+    --color-bg-lighter: #1a1a1a;
+    --color-text-primary: #f5f5f5;
+    --color-text-secondary: #aaaaaa;
+    --color-accent: #b3946a;
+    --color-accent-light: #cfa97c;
+    --color-accent-dark: #97805b;
+    
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-overlay: rgba(0, 0, 0, 0.7);
+    --color-card-bg: rgba(26, 26, 26, 0.7);
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.5s ease;
+    --transition-slow: 0.8s ease;
+    
+    --space-xs: 1.5rem;
+    --space-sm: 3rem;
+    --space-md: 6rem;
+    --space-lg: 10rem;
+}
+
+body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+}
+
+.bg-darker {
+    background-color: var(--color-bg-darker);
+}
+
+.bg-lighter {
+    background-color: var(--color-bg-lighter);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: 6rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 4.2rem;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p, span, li {
+    color: var(--color-text-secondary);
+    font-size: 1.6rem;
+}
+
+.section-padding {
+    padding: var(--space-md) 0;
+}
+
+.section-subtitle {
+    color: var(--color-accent);
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+.section-title {
+    margin-bottom: var(--space-xs);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    width: 6rem;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+.text-center .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 0;
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 1rem;
+}
+
+.btn span {
+    position: relative;
+    z-index: 2;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+.btn i {
+    margin-left: 1rem;
+    position: relative;
+    z-index: 2;
+    transition: var(--transition-fast);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-fast);
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+}
+
+.btn-primary::before {
+    background-color: var(--color-text-primary);
+}
+
+.btn-outline {
+    border: 1px solid var(--color-accent);
+    color: var(--color-text-primary);
+}
+
+.btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn-primary:hover span,
+.btn-primary:hover i {
+    color: var(--color-accent);
+}
+
+.btn-outline:hover span,
+.btn-outline:hover i {
+    color: var(--color-bg-primary);
+}
+
+.card {
+    background-color: var(--color-bg-lighter);
+    border-radius: 0;
+    overflow: hidden;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}

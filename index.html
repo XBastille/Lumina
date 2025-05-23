@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional photography portfolio showcasing artistic vision through captivating imagery">
+    <title>Lumina | Photography Portfolio</title>
+    
+    <link rel="icon" href="assets/img/logo/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/dark-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="loading">
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo" data-aos="fade-down" data-aos-delay="300">
+                    <a href="index.html">
+                        <span class="logo-text">LUMINA</span>
+                    </a>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                            <a href="index.html" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                            <a href="pages/portfolio.html" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+                            <a href="pages/about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="700">
+                            <a href="pages/contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="800">
+                            <a href="pages/blog.html" class="nav-link">Journal</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-toggle" data-aos="fade-down" data-aos-delay="900">
+                    <span class="nav-toggle-icon"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-image-container">
+                    <img src="assets/img/hero-1.jpg" alt="Silhouette of photographer against sunset" class="hero-image">
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="1200">
+                        <span class="line">Capturing</span>
+                        <span class="line">Moments,</span>
+                        <span class="line">Creating</span>
+                        <span class="line">Memories</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="1700">
+                        Fine art photography that tells your unique story
+                    </p>
+                    
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="2000">
+                        <a href="pages/portfolio.html" class="btn btn-primary">
+                            <span>Explore Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="pages/contact.html" class="btn btn-outline">
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator" data-aos="fade" data-aos-delay="2300">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section class="featured-work section-padding" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Selected Works</span>
+                    <h2 class="section-title">Featured Photography</h2>
+                </div>
+                
+                <div class="swiper featured-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/featured-1.jpg" alt="Mountain landscape at sunset">
+                                </div>
+                                <div class="gallery-info">
+                                    <h3>Mountain Silhouettes</h3>
+                                    <span>Landscape</span>
+                                </div>
+                                <a href="pages/portfolio.html" class="gallery-link">View Project</a>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/featured-2.jpg" alt="Close-up portrait in dramatic lighting">
+                                </div>
+                                <div class="gallery-info">
+                                    <h3>Portraits in Shadow</h3>
+                                    <span>Portrait</span>
+                                </div>
+                                <a href="pages/portfolio.html" class="gallery-link">View Project</a>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/featured-3.jpg" alt="Wedding couple walking away in soft focus">
+                                </div>
+                                <div class="gallery-info">
+                                    <h3>Everlasting Moments</h3>
+                                    <span>Wedding</span>
+                                </div>
+                                <a href="pages/portfolio.html" class="gallery-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up">
+                    <a href="pages/portfolio.html" class="btn btn-primary">View All Works</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-teaser section-padding bg-darker">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="about-image">
+                            <img src="assets/img/gallery/photographer.jpg" alt="Portrait of the photographer">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-left">
+                        <div class="about-content">
+                            <span class="section-subtitle">About Me</span>
+                            <h2 class="section-title">The Person Behind the Lens</h2>
+                            <p class="about-description">
+                                I'm a fine art photographer with over 10 years of experience capturing the beauty in ordinary moments. My work focuses on finding the extraordinary in the everyday, using light and shadow to tell compelling visual stories.
+                            </p>
+                            <a href="pages/about.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section-padding">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-subtitle">What Clients Say</span>
+                    <h2 class="section-title">Testimonials</h2>
+                </div>
+                
+                <div class="swiper testimonials-slider" data-aos="fade-up" data-aos-delay="300">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"Working with Lumina was an absolute pleasure. The photographs captured exactly what we wanted and more."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <span class="name">Sarah & David</span>
+                                    <span class="title">Wedding Clients</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"The portraits exceeded our expectations. The attention to detail and ability to capture emotion is unmatched."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <span class="name">Michael Johnson</span>
+                                    <span class="title">Portrait Session</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instagram-feed">
+            <div class="container-fluid">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title">Follow on Instagram</h2>
+                    <a href="https://instagram.com" target="_blank" class="instagram-username">@lumina_photography</a>
+                </div>
+                
+                <div class="instagram-grid" data-aos="fade-up">
+                    <a href="#" class="instagram-item">
+                        <img src="assets/img/gallery/insta-1.jpg" alt="Instagram post">
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <img src="assets/img/gallery/insta-2.jpg" alt="Instagram post">
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <img src="assets/img/gallery/insta-3.jpg" alt="Instagram post">
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <img src="assets/img/gallery/insta-4.jpg" alt="Instagram post">
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <img src="assets/img/gallery/insta-5.jpg" alt="Instagram post">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-brand">
+                            <a href="index.html" class="footer-logo">LUMINA</a>
+                            <p>Capturing moments that last forever through the art of photography.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="pages/portfolio.html">Portfolio</a></li>
+                                <li><a href="pages/about.html">About</a></li>
+                                <li><a href="pages/contact.html">Contact</a></li>
+                                <li><a href="pages/blog.html">Journal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="footer-newsletter">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to receive updates and special offers</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Lumina Photography. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/slider.js"></script>
+</body>
+</html>

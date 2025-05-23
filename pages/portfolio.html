@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the professional photography portfolio showcasing captivating imagery across various styles">
+    <title>Portfolio | Lumina Photography</title>
+    
+    <link rel="icon" href="../assets/img/logo/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body class="loading">
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo" data-aos="fade-down" data-aos-delay="300">
+                    <a href="../index.html">
+                        <span class="logo-text">LUMINA</span>
+                    </a>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                            <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="700">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="800">
+                            <a href="blog.html" class="nav-link">Journal</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-toggle" data-aos="fade-down" data-aos-delay="900">
+                    <span class="nav-toggle-icon"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Portfolio</h1>
+                <p class="page-description" data-aos="fade-up" data-aos-delay="200">
+                    Explore a collection of my finest work across various styles and subjects
+                </p>
+            </div>
+        </section>
+
+        <section class="portfolio-section section-padding">
+            <div class="container">
+                <div class="portfolio-filters" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="*">All Categories</button>
+                    <button class="filter-btn" data-filter=".landscape">Landscape</button>
+                    <button class="filter-btn" data-filter=".portrait">Portrait</button>
+                    <button class="filter-btn" data-filter=".wedding">Wedding</button>
+                    <button class="filter-btn" data-filter=".travel">Travel</button>
+                    <button class="filter-btn" data-filter=".street">Street</button>
+                </div>
+                
+                <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-item landscape" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/landscape-1.jpg" alt="Misty mountain range at sunrise">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Mountain Mist</h3>
+                                    <span>Landscape</span>
+                                </div>
+                                <a href="../assets/img/gallery/landscape-1.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item landscape" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/landscape-2.jpg" alt="Dramatic coastline with crashing waves">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Coastal Drama</h3>
+                                    <span>Landscape</span>
+                                </div>
+                                <a href="../assets/img/gallery/landscape-2.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item portrait" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/portrait-1.jpg" alt="Elegant portrait with dramatic lighting">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Light & Shadow</h3>
+                                    <span>Portrait</span>
+                                </div>
+                                <a href="../assets/img/gallery/portrait-1.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item portrait" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/portrait-2.jpg" alt="Emotive black and white portrait">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Inner Reflection</h3>
+                                    <span>Portrait</span>
+                                </div>
+                                <a href="../assets/img/gallery/portrait-2.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item wedding" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/wedding-1.jpg" alt="Couple embracing during sunset ceremony">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Forever Moment</h3>
+                                    <span>Wedding</span>
+                                </div>
+                                <a href="../assets/img/gallery/wedding-1.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item wedding" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/wedding-2.jpg" alt="Intimate wedding ceremony in forest setting">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Natural Union</h3>
+                                    <span>Wedding</span>
+                                </div>
+                                <a href="../assets/img/gallery/wedding-2.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item travel" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/travel-1.jpg" alt="Ancient temple at sunset in Southeast Asia">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Ancient Wonders</h3>
+                                    <span>Travel</span>
+                                </div>
+                                <a href="../assets/img/gallery/travel-1.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item travel" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/travel-2.jpg" alt="Vibrant street market in Morocco">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Market Colors</h3>
+                                    <span>Travel</span>
+                                </div>
+                                <a href="../assets/img/gallery/travel-2.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item street" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/street-1.jpg" alt="Rainy night street scene with neon reflections">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Neon Nights</h3>
+                                    <span>Street</span>
+                                </div>
+                                <a href="../assets/img/gallery/street-1.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item street" data-aos="fade-up">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/gallery/street-2.jpg" alt="Black and white candid moment in city square">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Urban Stories</h3>
+                                    <span>Street</span>
+                                </div>
+                                <a href="../assets/img/gallery/street-2.jpg" class="portfolio-expand">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section section-padding bg-darker">
+            <div class="container text-center">
+                <h2 class="section-title" data-aos="fade-up">Let's Create Something Beautiful Together</h2>
+                <p class="section-description" data-aos="fade-up" data-aos-delay="200">
+                    Interested in working with me? Let's discuss your project and bring your vision to life.
+                </p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="about.html" class="btn btn-outline">Learn More About Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-brand">
+                            <a href="../index.html" class="footer-logo">LUMINA</a>
+                            <p>Capturing moments that last forever through the art of photography.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="blog.html">Journal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="footer-newsletter">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to receive updates and special offers</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Lumina Photography. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="lightbox-container">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h3></h3>
+                <span></span>
+            </div>
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            <button class="lightbox-close"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.portfolio-item').forEach(function(item) {
+                const img = item.querySelector('img');
+                if (img) {
+                    item.classList.add('loading');
+                    
+                    if (img.complete) {
+                        setTimeout(() => {
+                            item.classList.remove('loading');
+                        }, 500); 
+                    } else {
+                        img.onload = function() {
+                            item.classList.remove('loading');
+                        };
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+            const grid = document.querySelector('.portfolio-grid');
+            const items = document.querySelectorAll('.portfolio-item');
+            
+            if (grid) {
+                grid.style.display = 'grid';
+                grid.style.gridTemplateColumns = window.innerWidth < 576 ? 'repeat(1, 1fr)' : 
+                                               window.innerWidth < 992 ? 'repeat(2, 1fr)' : 
+                                               'repeat(3, 1fr)';
+                grid.style.gap = '10px'; 
+                
+                items.forEach(item => {
+                    item.style.position = 'relative';
+                    item.style.left = 'auto';
+                    item.style.top = 'auto';
+                    item.style.width = '100%';
+                    item.style.height = '100%';
+                    item.style.margin = '0';
+                    item.style.padding = '0';
+                    item.style.borderRadius = '0';
+                    
+                    const imageContainer = item.querySelector('.portfolio-image');
+                    if (imageContainer) {
+                        imageContainer.style.width = '100%';
+                        imageContainer.style.height = '100%';
+                        imageContainer.style.aspectRatio = '3/4';
+                    }
+                    
+                    const img = item.querySelector('img');
+                    if (img) {
+                        img.style.width = '100%';
+                        img.style.height = '100%';
+                        img.style.objectFit = 'cover';
+                        img.style.objectPosition = 'center';
+                        img.style.display = 'block';
+                        img.style.margin = '0';
+                        img.style.padding = '0';
+                    }
+                });
+            }
+        });
+        
+        window.addEventListener('resize', function() {
+            const grid = document.querySelector('.portfolio-grid');
+            
+            if (grid) {
+                grid.style.gridTemplateColumns = window.innerWidth < 576 ? 'repeat(1, 1fr)' : 
+                                                window.innerWidth < 992 ? 'repeat(2, 1fr)' : 
+                                                'repeat(3, 1fr)';
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.portfolio-item').forEach((item, index) => {
+                if (!item.id) item.id = 'portfolio-item-' + index;
+            });
+            
+            const portfolioObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && 
+                        (mutation.attributeName === 'style' || 
+                         mutation.attributeName === 'class')) {
+                        
+                        const item = mutation.target;
+                        const imageContainer = item.querySelector('.portfolio-image');
+                        
+                        if (imageContainer) {
+                            imageContainer.style.aspectRatio = '3/4';
+                            imageContainer.style.height = '100%';
+                            imageContainer.style.width = '100%';
+                        }
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                portfolioObserver.observe(item, { 
+                    attributes: true,
+                    attributeFilter: ['style', 'class']
+                });
+            });
+        });
+    </script>
+</body>
+</html>

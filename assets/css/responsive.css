@@ -1,0 +1,207 @@
+/* Responsive Breakpoints:
+   - Small: 576px
+   - Medium: 768px
+   - Large: 992px
+   - Extra Large: 1200px
+*/
+
+@media (max-width: 1199.98px) {
+    html {
+        font-size: 60%;
+    }
+    
+    .hero-title {
+        font-size: 5.5rem;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .instagram-item:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    html {
+        font-size: 58%;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-content {
+        max-width: 50rem;
+    }
+    
+    .about-teaser .row {
+        flex-direction: column;
+    }
+    
+    .about-teaser .col-md-6 {
+        width: 100%;
+    }
+    
+    .about-image {
+        margin-bottom: 3rem;
+    }
+    
+    .footer-top .col-md-4 {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    html {
+        font-size: 56%;
+    }
+    
+    .header {
+        padding: 2rem 0;
+    }
+    
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--color-bg-darker);
+        padding: 10rem 3rem 3rem;
+        transition: right var(--transition-medium);
+        z-index: 1000;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .nav-open .nav {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-item {
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        font-size: 1.8rem;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.6));
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .instagram-item:nth-child(5) {
+        display: block;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+    }
+    
+    .footer-copyright {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    html {
+        font-size: 54%;
+    }
+    
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    h2 {
+        font-size: 3.6rem;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .testimonial-item {
+        padding: 3rem 2rem;
+        margin: 1rem;
+    }
+    
+    .back-to-top {
+        width: 4rem;
+        height: 4rem;
+        right: 2rem;
+        bottom: 2rem;
+    }
+
+    .scroll-indicator {
+        bottom: 3rem;
+        width: auto;
+    }
+    
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 52%;
+    }
+    
+    .hero-title {
+        font-size: 3.6rem;
+    }
+    
+    .btn {
+        padding: 1rem 2rem;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-height: 650px) {
+    .hero {
+        height: 120vh;
+    }
+    
+    .scroll-indicator {
+        bottom: 3rem;
+    }
+}
