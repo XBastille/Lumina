@@ -18,11 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add this before your existing Isotope initialization
     if (grid && typeof Isotope !== 'undefined') {
-        // Remove existing Isotope initialization and replace with this:
         
-        // Force grid layout first to ensure proper structure
         grid.style.display = 'grid';
         grid.style.gridTemplateColumns = window.innerWidth < 576 ? 'repeat(1, 1fr)' : 
                                         window.innerWidth < 992 ? 'repeat(2, 1fr)' : 
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         grid.style.gap = '30px';
         grid.style.width = '100%';
         
-        // Initialize Isotope with settings that won't break your grid
         iso = new Isotope(grid, {
             itemSelector: '.portfolio-item',
             layoutMode: 'fitRows',
@@ -39,16 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             transitionDuration: '0.6s',
             stagger: 80,
-            // Don't allow Isotope to position items absolutely
             resize: false,
-            // Don't change item sizes
             masonry: {
                 columnWidth: '.portfolio-item',
                 gutter: 30
             }
         });
         
-        // Force correct positioning after Isotope initializes
         setTimeout(() => {
             document.querySelectorAll('.portfolio-item').forEach(item => {
                 item.style.position = 'relative';
@@ -102,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const filterButtons = document.querySelectorAll('.filter-btn');
         
-        // Replace the existing filterButtons event handler with this improved version
         filterButtons.forEach(button => {
             button.addEventListener('click', function(event) {
                 createRippleEffect(this, event);
@@ -112,13 +104,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const filterValue = this.getAttribute('data-filter');
                 
-                // Store original heights before filtering
                 const itemHeights = {};
                 portfolioItems.forEach(item => {
                     const rect = item.getBoundingClientRect();
                     itemHeights[item.id || Math.random()] = rect.height;
                     
-                    // Explicitly set the height to prevent shrinking
                     item.style.minHeight = rect.height + 'px';
                 });
                 
@@ -165,23 +155,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(resetItemDimensions, 600);
                 }
                 
-                // Reset the portfolio grid dimensions
                 function resetItemDimensions() {
-                    // Force correct grid layout
                     grid.style.display = 'grid';
                     grid.style.gridTemplateColumns = window.innerWidth < 576 ? 'repeat(1, 1fr)' : 
                                                     window.innerWidth < 992 ? 'repeat(2, 1fr)' : 
                                                     'repeat(3, 1fr)';
                     grid.style.gap = '10px';
                     
-                    // Reset all portfolio items
                     portfolioItems.forEach(item => {
-                        // Reset positioning
                         item.style.position = 'relative';
                         item.style.left = 'auto';
                         item.style.top = 'auto';
                         
-                        // Restore aspect ratio and dimensions
                         const imageContainer = item.querySelector('.portfolio-image');
                         if (imageContainer) {
                             imageContainer.style.aspectRatio = '3/4';
@@ -189,7 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             imageContainer.style.width = '100%';
                         }
                         
-                        // Force image to cover container
                         const img = item.querySelector('img');
                         if (img) {
                             img.style.width = '100%';
@@ -197,13 +181,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             img.style.objectFit = 'cover';
                         }
                         
-                        // Clear any temporary min-height
                         setTimeout(() => {
                             item.style.minHeight = '';
                         }, 100);
                     });
                     
-                    // Force isotope to respect our layout
                     iso.layout();
                 }
                 
@@ -560,13 +542,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(style);
     }
     
-    // New code to properly handle skeleton loaders and animations
     function setupPortfolioAnimations() {
         const portfolioItems = document.querySelectorAll('.portfolio-item');
         
-        // Force proper image coverage for all items
         portfolioItems.forEach(item => {
-            // Ensure image covers its container
             const img = item.querySelector('img');
             if (img) {
                 img.style.width = '100%';
@@ -576,7 +555,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.style.display = 'block';
             }
             
-            // Ensure portfolio-image has correct dimensions
             const imageContainer = item.querySelector('.portfolio-image');
             if (imageContainer) {
                 imageContainer.style.width = '100%';
@@ -585,45 +563,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Create intersection observer for scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const item = entry.target;
                     
-                    // If the item hasn't been animated yet
                     if (!item.classList.contains('animated')) {
-                        // Show skeleton loader first
                         item.classList.add('loading');
                         
-                        // Get the image
                         const img = item.querySelector('img');
                         
-                        // Check if image is already loaded
                         if (img.complete) {
-                            // Delay to show skeleton effect
                             setTimeout(() => {
-                                // Remove loading state
                                 item.classList.remove('loading');
-                                // Add animated class to prevent re-animation
                                 item.classList.add('animated');
-                                // Animate the item entrance
                                 animateItem(item);
                             }, 400);
                         } else {
-                            // When image loads
                             img.onload = function() {
-                                // Remove loading state
                                 item.classList.remove('loading');
-                                // Add animated class to prevent re-animation
                                 item.classList.add('animated');
-                                // Animate the item entrance
                                 animateItem(item);
                             };
                         }
                     }
                     
-                    // Stop observing once animated
                     observer.unobserve(item);
                 }
             });
@@ -632,13 +596,11 @@ document.addEventListener('DOMContentLoaded', function() {
             rootMargin: '0px 0px -50px 0px'
         });
         
-        // Start observing all portfolio items
         portfolioItems.forEach(item => {
             observer.observe(item);
         });
     }
     
-    // Function to animate item entrance with GSAP
     function animateItem(item) {
         if (typeof gsap !== 'undefined') {
             gsap.fromTo(item, 
@@ -646,18 +608,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }
             );
         } else {
-            // CSS fallback
             item.style.animation = 'itemEntrance 0.6s forwards ease-out';
         }
     }
     
-    // Fix lightbox hover effect
     function fixLightboxNavigation() {
         const lightboxPrev = document.querySelector('.lightbox-prev');
         const lightboxNext = document.querySelector('.lightbox-next');
         const lightboxClose = document.querySelector('.lightbox-close');
         
-        // Override hover behavior for previous button
         if (lightboxPrev) {
             lightboxPrev.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-50%) scale(1.05)';
@@ -668,7 +627,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Override hover behavior for next button
         if (lightboxNext) {
             lightboxNext.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-50%) scale(1.05)';
@@ -679,7 +637,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Override hover behavior for close button
         if (lightboxClose) {
             lightboxClose.addEventListener('mouseenter', function() {
                 this.style.transform = 'scale(1.05)';
@@ -691,14 +648,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Call our new functions
     setupPortfolioAnimations();
     fixLightboxNavigation();
     
-    // Add filter button event to reset animations when filtering
     document.querySelectorAll('.filter-btn').forEach(button => {
         button.addEventListener('click', function() {
-            // Wait for filter transition to complete
             setTimeout(() => {
                 setupPortfolioAnimations();
             }, 700);
